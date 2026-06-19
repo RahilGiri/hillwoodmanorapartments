@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Floor Plans & Pricing | Hillwood Manor Apartments</title>
+  <meta name="description" content="Explore our 1, 2, and 3 bedroom floor plans at Hillwood Manor Apartments in Union City, TN. Pricing and availability details.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Shared Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">
+        <a href="index.html">
+          <svg width="24" height="24" viewBox="0 0 24 24" class="svg-icon" fill="var(--c-sage)">
+            <path d="M12 3L2 12h3v8h14v-8h3L12 3zm0 2.8l7 6.2v8H5v-8l7-6.2z"/>
+          </svg>
+          <div>
+            Hillwood Manor
+            <span class="logo-sub">Union City, TN</span>
+          </div>
+        </a>
+      </div>
+      <button class="mobile-toggle" aria-label="Menu" aria-expanded="false">
+        <span class="hamburger"></span>
+      </button>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="floor-plans.html" class="active">Floor Plans</a></li>
+          <li><a href="amenities.html">Amenities</a></li>
+          <li><a href="neighborhood.html">Neighborhood</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <a href="tel:731-599-1049" class="phone-link">731.599.1049</a>
+        <a href="contact.html" class="btn btn-primary" style="padding: 0.6rem 1.5rem;">Schedule a Tour</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Internal Hero -->
+  <section class="hero-internal">
+    <img src="images/interior_living.png" class="slide-img active" alt="Living Room" style="opacity: 1;">
+    <div class="hero-slider-overlay"></div>
+    <div class="container reveal">
+      <span class="eyebrow" style="color: var(--c-sand-light);">Floor Plans &amp; Pricing</span>
+      <h1 style="max-width: 800px; margin: 0 auto var(--space-sm); color: #fff;">Find the layout that fits your lifestyle.</h1>
+      <p style="max-width: 600px; margin: 0 auto; font-size: 1.1rem; color: rgba(255,255,255,0.9);">Take a look at our available 1, 2, and 3 bedroom homes. <br><em style="font-size: 0.85rem; opacity: 0.8;">Note: Pricing and availability are subject to change. Please call the leasing office to confirm.</em></p>
+    </div>
+  </section>
+
+  <!-- Floor Plans Section -->
+  <section class="section">
+    <div class="container">
+      
+      <!-- Filter Tabs -->
+      <div class="filter-tabs reveal">
+        <button class="filter-btn active" data-filter="all">All Plans</button>
+        <button class="filter-btn" data-filter="1">1 Bedroom</button>
+        <button class="filter-btn" data-filter="2">2 Bedroom</button>
+        <button class="filter-btn" data-filter="3">3 Bedroom</button>
+      </div>
+      
+      <div class="grid-3">
+        
+        <!-- 1 Bedroom Plan -->
+        <div class="card plan-card reveal" data-beds="1">
+          <div style="height: 250px;">
+            <img src="images/interior_bedroom.png" alt="1 Bedroom Layout" style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--border-radius) var(--border-radius) 0 0;">
+          </div>
+          <div class="plan-card-body">
+            <span class="eyebrow mt-sm" style="color: var(--c-sage);">1 Bedroom</span>
+            <h3>The Pleasant Valley</h3>
+            <div class="plan-price">From $950 / mo</div>
+            <div class="plan-meta">
+              <span class="meta-pill">1 Bed</span>
+              <span class="meta-pill">1 Bath</span>
+              <span class="meta-pill">~648 sq ft</span>
+            </div>
+            <p style="flex-grow: 1; margin-top: 0.5rem; font-size: 0.95rem;">A thoughtful one-bedroom layout perfect for an individual or couple, featuring a bright living room and generous closet space.</p>
+            <div class="plan-meta mt-sm mb-0">
+              <span class="meta-pill" style="background: rgba(0,0,0,0.05); color: var(--c-text-secondary);">Open Layout</span>
+              <span class="meta-pill" style="background: rgba(0,0,0,0.05); color: var(--c-text-secondary);">Large Closet</span>
+            </div>
+            <a href="contact.html" class="btn btn-ghost mt-md" style="width: 100%;">Check Availability</a>
+          </div>
+        </div>
+
+        <!-- 2 Bedroom Plan -->
+        <div class="card plan-card reveal" data-beds="2" style="transition-delay: 0.1s;">
+          <div style="height: 250px;">
+            <img src="images/interior_living.png" alt="2 Bedroom Layout" style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--border-radius) var(--border-radius) 0 0;">
+          </div>
+          <div class="plan-card-body">
+            <span class="eyebrow mt-sm" style="color: var(--c-sage);">2 Bedroom</span>
+            <h3>The Stone Street</h3>
+            <div class="plan-price">From $1,050 / mo</div>
+            <div class="plan-meta">
+              <span class="meta-pill">2 Bed</span>
+              <span class="meta-pill">1 Bath</span>
+              <span class="meta-pill">~850 sq ft</span>
+            </div>
+            <p style="flex-grow: 1; margin-top: 0.5rem; font-size: 0.95rem;">Our most popular option. Perfect for a home office, a roommate, or just extra room to stretch out.</p>
+            <div class="plan-meta mt-sm mb-0">
+              <span class="meta-pill" style="background: rgba(0,0,0,0.05); color: var(--c-text-secondary);">Extra Storage</span>
+              <span class="meta-pill" style="background: rgba(0,0,0,0.05); color: var(--c-text-secondary);">Corner Unit</span>
+            </div>
+            <a href="contact.html" class="btn btn-primary mt-md" style="width: 100%;">Check Availability</a>
+          </div>
+        </div>
+
+        <!-- 3 Bedroom Plan -->
+        <div class="card plan-card reveal" data-beds="3" style="transition-delay: 0.2s;">
+          <div style="height: 250px;">
+            <img src="images/interior_kitchen.png" alt="3 Bedroom Layout" style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--border-radius) var(--border-radius) 0 0;">
+          </div>
+          <div class="plan-card-body">
+            <span class="eyebrow mt-sm" style="color: var(--c-sage);">3 Bedroom</span>
+            <h3>The Obion</h3>
+            <div class="plan-price" style="color: var(--c-text-secondary); font-size: 1.25rem;">Call for Pricing</div>
+            <div class="plan-meta">
+              <span class="meta-pill">3 Bed</span>
+              <span class="meta-pill">2 Bath</span>
+              <span class="meta-pill">~1,150 sq ft</span>
+            </div>
+            <p style="flex-grow: 1; margin-top: 0.5rem; font-size: 0.95rem;">Expansive living space with room for the whole family, featuring our largest layout and plenty of natural light.</p>
+            <div class="plan-meta mt-sm mb-0">
+              <span class="meta-pill" style="background: rgba(0,0,0,0.05); color: var(--c-text-secondary);">Primary En-Suite</span>
+              <span class="meta-pill" style="background: rgba(0,0,0,0.05); color: var(--c-text-secondary);">Max Space</span>
+            </div>
+            <a href="contact.html" class="btn btn-ghost mt-md" style="width: 100%;">Check Availability</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Image Break -->
+  <section class="section" style="padding: 0;">
+    <div class="container reveal">
+      <img src="images/interior_kitchen.png" alt="Newly renovated kitchen" style="width: 100%; height: 400px; object-fit: cover; border-radius: var(--border-radius-lg); box-shadow: var(--shadow-lg);">
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section">
+    <div class="container reveal">
+      <div style="max-width: 800px; margin: 0 auto; background: var(--c-bg-secondary); padding: var(--space-lg); border-radius: var(--border-radius-lg);">
+        <span class="eyebrow text-center">Questions?</span>
+        <h2 class="text-center" style="margin-bottom: var(--space-lg);">Frequently Asked Questions</h2>
+        
+        <div class="faq-item">
+          <button class="faq-question">
+            What is included in the rent?
+            <span class="faq-icon"></span>
+          </button>
+          <div class="faq-answer">
+            <p>Please contact our leasing office for the most current details regarding utilities, trash service, and what is included in your monthly rent payment.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Are the floor plan dimensions exact?
+            <span class="faq-icon"></span>
+          </button>
+          <div class="faq-answer">
+            <p>The square footage listed is approximate. Actual layouts and dimensions may vary slightly depending on the specific unit. We encourage you to schedule a tour to see the space in person.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            How far in advance should I apply?
+            <span class="faq-icon"></span>
+          </button>
+          <div class="faq-answer">
+            <p>Availability can change quickly. We recommend contacting the leasing office as soon as you have a target move-in date so we can let you know what units might be opening up.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" style="border-bottom: none;">
+          <button class="faq-question">
+            Is there a security deposit?
+            <span class="faq-icon"></span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes, a security deposit is required. The exact amount depends on your specific lease terms and screening results. Call our office for current rates and fee structures.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Band -->
+  <section class="cta-band">
+    <div class="container reveal">
+      <h2>Not sure which layout fits?</h2>
+      <p style="margin-bottom: var(--space-md); font-size: 1.15rem; opacity: 0.9;">Give us a call. We can discuss your needs and find the right home for you.</p>
+      <div>
+        <a href="tel:731-599-1049" class="btn btn-ghost">Call 731-599-1049</a>
+        <a href="contact.html" class="btn btn-primary" style="margin-left: 0.5rem;">Schedule a Tour</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shared Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo">
+            <svg width="24" height="24" viewBox="0 0 24 24" class="svg-icon" fill="var(--c-sage)">
+              <path d="M12 3L2 12h3v8h14v-8h3L12 3zm0 2.8l7 6.2v8H5v-8l7-6.2z"/>
+            </svg>
+            Hillwood Manor
+          </div>
+          <p style="color: rgba(255,255,255,0.6); max-width: 250px; font-size: 0.95rem;">A quiet, established residential apartment community in Union City, Tennessee.</p>
+          <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+            <a href="#" style="color: var(--c-sage); transition: color 0.3s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='var(--c-sage)'"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+            <a href="#" style="color: var(--c-sage); transition: color 0.3s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='var(--c-sage)'"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+            <a href="#" style="color: var(--c-sage); transition: color 0.3s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='var(--c-sage)'"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+          </div>
+
+        </div>
+        
+        <div>
+          <h4>Explore</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="floor-plans.html">Floor Plans &amp; Pricing</a></li>
+            <li><a href="amenities.html">Amenities</a></li>
+            <li><a href="neighborhood.html">Neighborhood</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4>Resident Info</h4>
+          <ul class="footer-links">
+            <li><a href="amenities.html#pets">Pet Policy</a></li>
+            <li><a href="floor-plans.html">Availability</a></li>
+            <li><a href="contact.html">Maintenance Requests</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4>Visit Us</h4>
+          <ul class="footer-links">
+            <li><span style="color: rgba(255,255,255,0.6);">1732 Stone St<br>Union City, TN 38261</span></li>
+            <li class="mt-sm"><a href="tel:731-599-1049" style="color: var(--c-sand); font-weight: 600; font-size: 1.1rem;">731-599-1049</a></li>
+            <li><span style="color: rgba(255,255,255,0.5); font-style: italic; font-size: 0.85rem;">Office hours vary, please call ahead.</span></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <div>&copy; <span id="current-year"></span> Hillwood Manor Apartments. All rights reserved.</div>
+        <div style="display: flex; align-items: center; gap: 0.5rem; color: rgba(255,255,255,0.5);">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10h18v10H3z"/><path d="M12 2v8"/><path d="M12 2l-4 4"/><path d="M12 2l4 4"/></svg>
+          Equal Housing Opportunity
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
