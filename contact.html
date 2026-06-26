@@ -30,6 +30,7 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="floor-plans.html">Floor Plans</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
           <li><a href="amenities.html">Amenities</a></li>
           <li><a href="neighborhood.html">Neighborhood</a></li>
           <li><a href="contact.html" class="active">Contact</a></li>
@@ -55,7 +56,7 @@
 
   <!-- Contact Content -->
   <section class="section">
-    <div class="container grid-2" style="align-items: flex-start;">
+    <div class="container grid-2" style="align-items: stretch;">
       
       <!-- Contact Info Cards -->
       <div class="reveal">
@@ -90,15 +91,15 @@
       </div>
 
       <!-- Contact Form -->
-      <div class="reveal" style="transition-delay: 0.1s;">
-        <div class="card">
+      <div class="reveal" style="transition-delay: 0.1s; height: 100%;">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column;">
           <h3 style="margin-bottom: var(--space-md);">Send a Message</h3>
           
           <div id="form-success" class="success-banner">
             Thanks for reaching out! We've received your message and will be in touch shortly.
           </div>
 
-          <form id="contact-form">
+          <form id="contact-form" action="YOUR_GOOGLE_APPS_SCRIPT_URL_HERE" method="POST" style="flex: 1; display: flex; flex-direction: column;">
             <div class="grid-2" style="gap: 1rem;">
               <div class="form-group">
                 <label for="firstName" class="form-label">First Name *</label>
@@ -131,9 +132,9 @@
               </select>
             </div>
 
-            <div class="form-group">
+            <div class="form-group" style="flex: 1; display: flex; flex-direction: column;">
               <label for="message" class="form-label">Message (Optional)</label>
-              <textarea id="message" class="form-control" placeholder="Any specific details we should know?"></textarea>
+              <textarea id="message" class="form-control" placeholder="Any specific details we should know?" style="flex: 1; min-height: 120px;"></textarea>
             </div>
 
             <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
@@ -147,14 +148,14 @@
   <!-- Full Width Map -->
   <section style="height: 400px; width: 100%; border-top: var(--border-light); background-color: #eee;">
     <iframe 
-      src="https://maps.google.com/maps?q=Union%20City,%20TN%2038261&t=&z=13&ie=UTF8&iwloc=&output=embed" 
+      src="https://maps.google.com/maps?q=1732%20Stone%20St,%20Union%20City,%20TN%2038261&t=&z=14&ie=UTF8&iwloc=&output=embed" 
       width="100%" 
       height="100%" 
       style="border:0;" 
       allowfullscreen="" 
       loading="lazy" 
       referrerpolicy="no-referrer-when-downgrade"
-      title="Google Map showing location of Union City, TN">
+      title="Google Map showing location of 1732 Stone St, Union City, TN">
     </iframe>
   </section>
 
@@ -183,6 +184,7 @@
           <ul class="footer-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="floor-plans.html">Floor Plans &amp; Pricing</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
             <li><a href="amenities.html">Amenities</a></li>
             <li><a href="neighborhood.html">Neighborhood</a></li>
           </ul>
@@ -217,6 +219,8 @@
     </div>
   </footer>
 
+  <script src="js/chatbot-data.js"></script>
+  <script src="js/widget.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

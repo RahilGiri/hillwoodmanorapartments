@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photo Gallery | Hillwood Manor Apartments</title>
+  <meta name="description" content="View photos of our 1, 2, and 3 bedroom floor plans, amenities, and community at Hillwood Manor Apartments.">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Add basic style for tabbed gallery filtering */
+    .hw-gallery-filter {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+    .hw-gallery-filter button {
+      padding: 8px 16px;
+      border: 1px solid var(--c-sage);
+      background: transparent;
+      color: var(--c-sage);
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+    .hw-gallery-filter button.active, .hw-gallery-filter button:hover {
+      background: var(--c-sage);
+      color: white;
+    }
+    .hw-bento-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-rows: 250px;
+      grid-auto-flow: dense; /* This packs items to fill any gaps */
+      gap: 16px;
+    }
+    @media (max-width: 768px) {
+      .hw-bento-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 150px;
+      }
+    }
+    .bento-large { grid-column: span 2; grid-row: span 2; }
+    .bento-tall { grid-column: span 1; grid-row: span 2; }
+    .bento-wide { grid-column: span 2; grid-row: span 1; }
+    .hw-gallery-item {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+    .hw-gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    .hw-gallery-item:hover img {
+      transform: scale(1.05);
+    }
+    .hw-gallery-item.hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Shared Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">
+        <a href="index.html">
+          <svg width="24" height="24" viewBox="0 0 24 24" class="svg-icon" fill="var(--c-sage)">
+            <path d="M12 3L2 12h3v8h14v-8h3L12 3zm0 2.8l7 6.2v8H5v-8l7-6.2z"/>
+          </svg>
+          <div>
+            Hillwood Manor
+            <span class="logo-sub">Union City, TN</span>
+          </div>
+        </a>
+      </div>
+      <button class="mobile-toggle" aria-label="Menu" aria-expanded="false">
+        <span class="hamburger"></span>
+      </button>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="floor-plans.html">Floor Plans</a></li>
+          <li><a href="gallery.html" class="active">Gallery</a></li>
+          <li><a href="amenities.html">Amenities</a></li>
+          <li><a href="neighborhood.html">Neighborhood</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <a href="tel:731-599-1049" class="phone-link">731.599.1049</a>
+        <a href="contact.html" class="btn btn-primary" style="padding: 0.6rem 1.5rem;">Schedule a Tour</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Internal Hero -->
+  <section class="hero-internal">
+    <img src="images/interior_living.png" class="slide-img active" alt="Living Room" style="opacity: 1;">
+    <div class="hero-slider-overlay"></div>
+    <div class="container reveal">
+      <span class="eyebrow" style="color: var(--c-sand-light);">Photo Gallery</span>
+      <h1 style="max-width: 800px; margin: 0 auto var(--space-sm); color: #fff;">See your future home.</h1>
+      <p style="max-width: 600px; margin: 0 auto; font-size: 1.1rem; color: rgba(255,255,255,0.9);">Explore photos of our 1, 2, and 3 bedroom floor plans and community amenities.</p>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="section">
+    <div class="container reveal">
+      <div class="hw-gallery-filter">
+        <button class="active" data-filter="all">All Photos</button>
+        <button data-filter="1bed">1 Bedroom (The Pleasant Valley)</button>
+        <button data-filter="2bed">2 Bedroom (The Stone Street)</button>
+        <button data-filter="3bed">3 Bedroom (The Obion)</button>
+        <button data-filter="amenities">Amenities & Exterior</button>
+      </div>
+
+      <div class="hw-bento-grid" id="hw-gallery-grid">
+        <!-- 1 Bed Images -->
+        <a href="#" class="hw-gallery-item bento-large" data-category="1bed"><img src="images/1bed_1.png" alt="1 Bedroom"></a>
+        <a href="#" class="hw-gallery-item" data-category="1bed"><img src="images/1bed_2.png" alt="1 Bedroom"></a>
+        <a href="#" class="hw-gallery-item bento-tall" data-category="1bed"><img src="images/1bed_3.png" alt="1 Bedroom"></a>
+        <a href="#" class="hw-gallery-item" data-category="1bed"><img src="images/1bed_4.png" alt="1 Bedroom"></a>
+        <a href="#" class="hw-gallery-item" data-category="1bed"><img src="images/1bed_5.png" alt="1 Bedroom"></a>
+        <a href="#" class="hw-gallery-item" data-category="1bed"><img src="images/1bed_6.png" alt="1 Bedroom"></a>
+        <a href="#" class="hw-gallery-item bento-wide" data-category="1bed"><img src="images/1bed_7.png" alt="1 Bedroom"></a>
+        
+        <!-- 2 Bed Images -->
+        <a href="#" class="hw-gallery-item bento-large" data-category="2bed"><img src="images/2bed_1.png" alt="2 Bedroom"></a>
+        <a href="#" class="hw-gallery-item" data-category="2bed"><img src="images/2bed_2.png" alt="2 Bedroom"></a>
+        <a href="#" class="hw-gallery-item bento-tall" data-category="2bed"><img src="images/2bed_3.png" alt="2 Bedroom"></a>
+        <a href="#" class="hw-gallery-item" data-category="2bed"><img src="images/2bed_4.png" alt="2 Bedroom"></a>
+        <a href="#" class="hw-gallery-item" data-category="2bed"><img src="images/2bed_5.png" alt="2 Bedroom"></a>
+        <a href="#" class="hw-gallery-item" data-category="2bed"><img src="images/2bed_6.png" alt="2 Bedroom"></a>
+        <a href="#" class="hw-gallery-item bento-wide" data-category="2bed"><img src="images/2bed_7.png" alt="2 Bedroom"></a>
+
+        <!-- 3 Bed Images -->
+        <a href="#" class="hw-gallery-item bento-large" data-category="3bed"><img src="images/3bed_1.png" alt="3 Bedroom"></a>
+        <a href="#" class="hw-gallery-item" data-category="3bed"><img src="images/3bed_2.png" alt="3 Bedroom"></a>
+        <a href="#" class="hw-gallery-item bento-tall" data-category="3bed"><img src="images/3bed_3.png" alt="3 Bedroom"></a>
+        <a href="#" class="hw-gallery-item" data-category="3bed"><img src="images/3bed_4.png" alt="3 Bedroom"></a>
+        <a href="#" class="hw-gallery-item" data-category="3bed"><img src="images/3bed_5.png" alt="3 Bedroom"></a>
+        <a href="#" class="hw-gallery-item" data-category="3bed"><img src="images/3bed_6.png" alt="3 Bedroom"></a>
+        <a href="#" class="hw-gallery-item bento-wide" data-category="3bed"><img src="images/3bed_7.png" alt="3 Bedroom"></a>
+
+        <!-- Amenities Images -->
+        <a href="#" class="hw-gallery-item bento-large" data-category="amenities"><img src="images/amenities_1.png" alt="Amenities"></a>
+        <a href="#" class="hw-gallery-item" data-category="amenities"><img src="images/amenities_2.png" alt="Amenities"></a>
+        <a href="#" class="hw-gallery-item bento-tall" data-category="amenities"><img src="images/amenities_3.png" alt="Amenities"></a>
+        <a href="#" class="hw-gallery-item" data-category="amenities"><img src="images/amenities_4.png" alt="Amenities"></a>
+        <a href="#" class="hw-gallery-item" data-category="amenities"><img src="images/amenities_5.png" alt="Amenities"></a>
+        <a href="#" class="hw-gallery-item" data-category="amenities"><img src="images/amenities_6.png" alt="Amenities"></a>
+        <a href="#" class="hw-gallery-item bento-wide" data-category="amenities"><img src="images/amenities_7.png" alt="Amenities"></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shared Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo">
+            <svg width="24" height="24" viewBox="0 0 24 24" class="svg-icon" fill="var(--c-sage)">
+              <path d="M12 3L2 12h3v8h14v-8h3L12 3zm0 2.8l7 6.2v8H5v-8l7-6.2z"/>
+            </svg>
+            Hillwood Manor
+          </div>
+          <p style="color: rgba(255,255,255,0.6); max-width: 250px; font-size: 0.95rem;">A quiet, established residential apartment community in Union City, Tennessee.</p>
+          <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+            <a href="#" style="color: var(--c-sage); transition: color 0.3s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='var(--c-sage)'"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+            <a href="#" style="color: var(--c-sage); transition: color 0.3s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='var(--c-sage)'"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+            <a href="#" style="color: var(--c-sage); transition: color 0.3s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='var(--c-sage)'"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+          </div>
+        </div>
+        
+        <div>
+          <h4>Explore</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="floor-plans.html">Floor Plans &amp; Pricing</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="amenities.html">Amenities</a></li>
+            <li><a href="neighborhood.html">Neighborhood</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4>Resident Info</h4>
+          <ul class="footer-links">
+            <li><a href="amenities.html#pets">Pet Policy</a></li>
+            <li><a href="floor-plans.html">Availability</a></li>
+            <li><a href="contact.html">Maintenance Requests</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4>Visit Us</h4>
+          <ul class="footer-links">
+            <li><span style="color: rgba(255,255,255,0.6);">1732 Stone St<br>Union City, TN 38261</span></li>
+            <li class="mt-sm"><a href="tel:731-599-1049" style="color: var(--c-sand); font-weight: 600; font-size: 1.1rem;">731-599-1049</a></li>
+            <li><span style="color: rgba(255,255,255,0.5); font-style: italic; font-size: 0.85rem;">Office hours vary, please call ahead.</span></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <div>&copy; <span id="current-year"></span> Hillwood Manor Apartments. All rights reserved.</div>
+        <div style="display: flex; align-items: center; gap: 0.5rem; color: rgba(255,255,255,0.5);">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10h18v10H3z"/><path d="M12 2v8"/><path d="M12 2l-4 4"/><path d="M12 2l4 4"/></svg>
+          Equal Housing Opportunity
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/chatbot-data.js"></script>
+  <script src="js/widget.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // Gallery Filtering Logic & URL param handling
+    document.addEventListener('DOMContentLoaded', () => {
+      const filterBtns = document.querySelectorAll('.hw-gallery-filter button');
+      const galleryItems = document.querySelectorAll('.hw-gallery-item');
+      
+      function filterGallery(category) {
+        filterBtns.forEach(btn => {
+          if(btn.dataset.filter === category) btn.classList.add('active');
+          else btn.classList.remove('active');
+        });
+        
+        galleryItems.forEach(item => {
+          if (category === 'all' || item.dataset.category === category) {
+            item.classList.remove('hidden');
+          } else {
+            item.classList.add('hidden');
+          }
+        });
+      }
+
+      // Check URL for ?tab= parameter
+      const urlParams = new URLSearchParams(window.location.search);
+      const tabParam = urlParams.get('tab');
+      if (tabParam) {
+        filterGallery(tabParam);
+      }
+
+      // Click events
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterGallery(btn.dataset.filter);
+          // Update URL without reloading
+          const newUrl = new URL(window.location);
+          newUrl.searchParams.set('tab', btn.dataset.filter);
+          window.history.replaceState({}, '', newUrl);
+        });
+      });
+    });
+  </script>
+  <!-- Lightbox -->
+  <div id="hw-lightbox" class="hw-hidden" style="position: fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.9); z-index: 9999; display: flex; align-items: center; justify-content: center; cursor: zoom-out;">
+    <button id="hw-lightbox-close" style="position: absolute; top: 20px; right: 30px; background: none; border: none; color: white; font-size: 3rem; cursor: pointer;">&times;</button>
+    <img id="hw-lightbox-img" src="" style="max-width: 90%; max-height: 90%; object-fit: contain; border-radius: 8px;">
+  </div>
+
+  <script>
+    const lightbox = document.getElementById('hw-lightbox');
+    const lightboxImg = document.getElementById('hw-lightbox-img');
+    const lightboxClose = document.getElementById('hw-lightbox-close');
+
+    document.querySelectorAll('.hw-gallery-item').forEach(item => {
+      item.addEventListener('click', (e) => {
+        e.preventDefault();
+        const imgSrc = item.querySelector('img').src;
+        lightboxImg.src = imgSrc;
+        lightbox.classList.remove('hw-hidden');
+      });
+    });
+
+    lightboxClose.addEventListener('click', () => {
+      lightbox.classList.add('hw-hidden');
+    });
+    lightbox.addEventListener('click', (e) => {
+      if(e.target === lightbox || e.target === lightboxImg) lightbox.classList.add('hw-hidden');
+    });
+  </script>
+</body>
+</html>
