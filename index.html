@@ -345,5 +345,15 @@
       if(e.target === lightbox || e.target === lightboxImg) lightbox.classList.add('hw-hidden');
     });
   </script>
+  <!-- Promo Popup -->
+  <div id="promo-popup" class="hw-hidden" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 10000; display: flex; align-items: center; justify-content: center;">
+    <div style="background: #fff; padding: 32px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.2); max-width: 400px; text-align: center; position: relative; width: 90%;">
+      <button id="promo-close" style="position: absolute; top: 12px; right: 12px; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: #666;">&times;</button>
+      <h3 style="color: var(--c-sage); margin-bottom: 12px;">Limited Time Offer! 🎉</h3>
+      <p style="font-size: 1rem; color: #444; margin-bottom: 16px;">Sign a lease this month and get <strong>$500 off</strong> your first month's rent!</p>
+      <p style="font-size: 0.75rem; color: #888; margin-bottom: 24px;">*Terms and conditions apply.</p>
+      <a href="contact.html" class="btn btn-primary" style="padding: 10px 24px; font-size: 1rem; display: inline-block;">Claim Offer</a>
+    </div>
+  </div>
 </body>
 </html>

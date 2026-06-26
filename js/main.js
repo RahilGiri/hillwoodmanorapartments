@@ -166,4 +166,29 @@ document.addEventListener('DOMContentLoaded', () => {
       heroSliderImages[currentSlide].classList.add('active');
     }, 3000); // Change image every 3 seconds
   }
+  // 9. Promo Popup
+  const promoPopup = document.getElementById('promo-popup');
+  const promoClose = document.getElementById('promo-close');
+  if (promoPopup && promoClose) {
+    let hasShownPromo = false;
+    window.addEventListener('scroll', () => {
+      if (hasShownPromo) return;
+      // Trigger when user scrolls near the bottom of the page
+      if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 100) {
+        promoPopup.classList.remove('hw-hidden');
+        hasShownPromo = true;
+      }
+    });
+
+    promoClose.addEventListener('click', () => {
+      promoPopup.classList.add('hw-hidden');
+    });
+
+    // Close when clicking outside the modal content
+    promoPopup.addEventListener('click', (e) => {
+      if (e.target === promoPopup) {
+        promoPopup.classList.add('hw-hidden');
+      }
+    });
+  }
 });
